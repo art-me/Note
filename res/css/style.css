@@ -1,0 +1,217 @@
+body{
+	margin:0px;
+	font-family: 'Comfortaa', cursive;
+	}
+#body{
+	z-index: -10;
+	position: absolute;
+	top: 80px;
+	padding-left: 150px;
+	padding-right: 150px;					
+	text-align: center;
+	transition-property: all;
+	transition-duration: 0.3s;
+	}
+
+#aside{ /* стиль сайдбара */
+	position:fixed;
+	top:0px;
+	left:-153px;
+	box-shadow: 0px 0px 4px 2px rgba(0,0,0,0.1);
+	background-color: white;
+	width: 150px;
+	height: 100%;
+	z-index: -99;
+	transition-property: all;
+	transition-duration: 0.3s;
+	}
+/* стиль заметки начался */
+.note { 
+	position: relative;
+	top: -1000px;
+	width: 240px;
+	height: 320px;
+	display: inline-block;
+	border-radius: 2px;
+	box-shadow: 0px 2px 2px 2px rgba(0,0,0,0.1);
+	background-color: #FFF888;
+	margin: 10px;
+	transition-property: all;
+	transition-duration: 0.3s;
+
+}
+.note:hover {
+	box-shadow: 0px 2px 5px 5px rgba(0,0,0,0.05);
+}	
+
+.note:hover span{
+	display: block;
+}
+.note:hover #act{
+	display: block;
+}			
+
+.note:hover .bar{
+	display: block;
+}
+
+input{
+	display: none;
+}
+label {					
+	width: 19px;
+	height: 19px;
+	display: block;
+	position: relative;
+	
+}
+input[type="checkbox"] + span {
+	cursor: pointer;
+	display: none;
+	position: absolute;
+	left: 0; top: 0;
+	width: 100%;
+	height: 100%;
+	background-color: gray;
+	background-image: url(res/img/check.png);
+	
+	opacity: 0.1;
+	
+}/* не чекнута */
+input[type="checkbox"]:checked + span {
+	display: block;
+	background-color: gray;
+	opacity: 0.4;
+}/* чекнута */
+
+textarea {
+	font-family: 'Comfortaa', cursive;
+	background-color: rgba(0,0,0,0.0);
+	resize: none;
+	border: none;
+}
+
+.color{cursor: pointer; float: left; width:40px; height:10px; }
+#green{background-color:#A1FF9C;}
+#yellow{background-color:#FFF888;}
+#oreng{background-color:#F7B98B;}
+#red{background-color:#EF8B89;}
+#purple{background-color:#D7BCC6;}
+#blue{background-color:#C4E3F7;}
+
+.bar {
+	display: none;
+	padding: 0px;
+	list-style: none;
+	position:absolute;
+	margin: 0px;
+	bottom: 0px;
+	width: 100%;				
+}
+.img{
+	cursor: pointer;
+	margin-left: 27px; 
+	margin-right: 27px;}
+/* стиль заметки закончился */
+
+/* не помню что это, удалить по боялся */
+.editNote {
+	width: 600
+}
+
+#addNote { /* кнопка добавить заметку */
+	cursor: pointer;
+	top: 50%;
+	left: 50%;
+	margin: -45px;
+	position: fixed;
+	width: 90px;
+	height:90px;
+	border-radius: 45px;
+	background-color: #0096DD;
+	box-shadow: 0px 0px 4px 2px rgba(0,0,0,0.1);
+	transition-property: all;
+	transition-duration: 0.3s;
+}
+
+#plus{ 
+	position:relative;
+	left:20%;
+	top:20%;
+	width:60%;
+	height:60%;}
+	
+/* стиль шапки  начало*/
+#header1{
+	position: absolute;
+	height:60px;
+	width:100%;
+	background-color: #0096DD;
+	box-shadow: 0px 2px 4px 2px rgba(0,0,0,0.1)
+}
+#header2{
+	position: absolute;
+	top: -10px;
+	height:60px;
+	width:100%;
+	background-color: white;
+	
+	box-shadow: 0px 2px 4px 2px rgba(0,0,0,0.1);
+	transition-property: all;
+	transition-duration: 0.3s;
+}
+#singIn {
+	position: absolute;
+	right:0px;
+	top: 0px;
+	margin: 20px;
+	width: 80px;
+	height: 80px;
+	border-radius: 40px;
+	background-color: #F3F5F6;
+	box-shadow: 0px 0px 4px 2px rgba(0,0,0,0.1)
+}
+#singimg{ width: 100%}
+a{
+	cursor: pointer;
+	display: inline-block;
+	text-decoration: none;
+	color: black;
+	margin: 20px;
+}
+#act {
+	display: none;
+	position: absolute;
+	opacity: 0.2;
+	bottom: 12px;
+	width: 100%;
+	text-align: justify;
+	left:0px;
+	}
+	
+.imgConsol{
+	height: 15px ;
+	}
+/* стиль шапки  конец*/
+
+#sideBar {				
+	cursor: pointer;
+	margin: 20px;				
+	height: 20px;}
+	#logo {
+	margin:15px;
+	margin-left: 0px;
+	height: 30px}
+
+
+
+#background{ 
+	position:fixed; 
+	z-index:-100;
+	width: 100%;
+	height: 100%; 
+	background: linear-gradient(to top, #F3F5F6, #E8F2F7);
+	}
+@media screen and (max-width: 1480px) {#body{padding-left: 150px; padding-right: 100px;} }
+@media screen and (max-width: 980px) {#body{padding-left: 150px; padding-right: 100px;} }
+@media screen and (max-width: 735px) {.note {width:100%} #singIn {width: 40px;height: 40px;border-radius: 20px;margin: 10px;} #header1{position: fixed;} #header2{position: fixed;} #addNote {position:fixed}}
